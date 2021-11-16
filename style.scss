@@ -80,6 +80,9 @@ header {
 }
 
 @media only screen and(max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
   header {
     position: fixed;
     top: 0;
