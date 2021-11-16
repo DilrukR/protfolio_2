@@ -133,8 +133,8 @@ header nav ul li a:hover {
     padding-left: 250px;
     background-color: #141c3a;
     position: absolute;
-    -webkit-transform: translateX(100%);
-            transform: translateX(100%);
+    -webkit-transform: translateX(120%);
+            transform: translateX(120%);
     -webkit-transition: all 0.5s;
     transition: all 0.5s;
     height: 40vh;
