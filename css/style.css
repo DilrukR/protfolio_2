@@ -43,13 +43,6 @@ header .hamclose {
   cursor: pointer;
 }
 
-@media (max-width: 768px) {
-  header .hamburger,
-  header .hamclose {
-    display: block;
-  }
-}
-
 header nav {
   margin-left: -200px;
   padding-right: 100px;
@@ -85,6 +78,105 @@ header nav ul li a {
 header nav ul li a:hover {
   color: #f7b500;
   outline: 1px solid #7510f7;
+}
+
+@media only screen and (max-width: 768px) {
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    background: #141c3a;
+    padding: 1rem;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  header .container {
+    z-index: 999;
+  }
+  header .container .logo img {
+    width: 50px;
+    height: 50px;
+  }
+  header .container .hamburger,
+  header .container .hamclose {
+    display: block;
+    position: absolute;
+    margin-left: 80%;
+    margin-top: -40px;
+    color: #fff;
+    font-size: 1.5rem;
+  }
+  header .container .hamclose {
+    display: none;
+  }
+  header .nav-container {
+    width: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 100px;
+    padding-left: 250px;
+    background-color: #141c3a;
+    position: absolute;
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    height: 40vh;
+  }
+  header .nav-container nav {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+    margin-top: 100px;
+    width: 100%;
+    padding-right: 0;
+  }
+  header .nav-container nav ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+  }
+  header .nav-container nav ul li {
+    width: 100%;
+    text-align: center;
+  }
+  header .nav-container nav ul li a {
+    color: #7510f7;
+    width: 100%;
+    text-decoration: none;
+    font-size: 1rem;
+    font-family: "Poppins", sans-serif;
+    font-weight: lighter;
+  }
 }
 
 .hero {
@@ -134,6 +226,40 @@ header nav ul li a:hover {
   font-weight: lighter;
 }
 
+@media only screen and (max-width: 768px) {
+  .hero {
+    height: 100vh;
+  }
+  .hero .hero-text {
+    padding-top: 100px;
+    font-size: 15px;
+    font-weight: bold;
+    color: #141c3a;
+    font-family: "Michroma", sans-serif;
+    margin-bottom: 1rem;
+    letter-spacing: 2px;
+    text-align: center;
+  }
+  .hero .hero-text h1 {
+    font-size: 25px;
+    line-height: 36px;
+  }
+  .hero .hero-text h3 {
+    font-size: 14px;
+    padding: 20px 15px;
+  }
+  .hero .hero-text img {
+    width: 400px;
+    margin-top: -10px;
+    position: relative;
+    z-index: -1;
+  }
+  .hero .hero-text img:hover {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+}
+
 .image-art {
   width: 100%;
   height: 100%;
@@ -146,6 +272,28 @@ header nav ul li a:hover {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+@media only screen and (max-width: 768px) {
+  .image-art {
+    height: 100%;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .image-art img {
+    width: 400px;
+    margin-top: -10px;
+    position: relative;
+    z-index: -1;
+  }
 }
 
 .about-me {
@@ -181,26 +329,33 @@ header nav ul li a:hover {
   color: #fff;
 }
 
+@media screen and (max-width: 768px) {
+  .about-me {
+    padding: 40px 30px;
+  }
+  .about-me h1 {
+    font-size: 1.5rem;
+    padding-bottom: 10px;
+  }
+  .about-me p {
+    font-size: 1rem;
+  }
+}
+
 .head-of-box {
   margin-top: 200px;
 }
 
 .box-container {
-  margin-top: 100px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  margin: 100px auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 33% 33% 33%;
+      grid-template-columns: 33% 33% 33%;
+  grid-auto-flow: row;
 }
 
 .box-container .box {
-  width: 500px;
   height: 300px;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -247,6 +402,31 @@ header nav ul li a:hover {
           box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
+}
+
+@media only screen and (max-width: 768px) {
+  .head-of-box {
+    margin-top: 100px;
+  }
+  .box-container {
+    display: block;
+    margin-left: -20px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 20px;
+  }
+  .box-container .box {
+    width: 90%;
+    margin: 30px;
+  }
+  .box-container .box:hover {
+    -webkit-transform: none;
+            transform: none;
+  }
 }
 
 .heading {
@@ -303,6 +483,12 @@ header nav ul li a:hover {
   border-radius: 20px;
 }
 
+.my-works .box .text-con {
+  padding-top: 200px;
+  position: absolute;
+  width: 400px;
+}
+
 .my-works .box .text-con h1 {
   color: #fff;
   padding-top: 20px;
@@ -311,6 +497,17 @@ header nav ul li a:hover {
 .my-works .box .text-con p {
   padding-top: 30px;
   color: #fff;
+}
+
+.my-works .box .text-con::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
 }
 
 .my-works .box h3 {
