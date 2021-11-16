@@ -85,7 +85,7 @@ header nav ul li a:hover {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 99%;
     z-index: 999;
     background: #141c3a;
     padding: 1rem;
@@ -243,10 +243,11 @@ header nav ul li a:hover {
   .hero .hero-text h1 {
     font-size: 25px;
     line-height: 36px;
+    padding: 0 10%;
   }
   .hero .hero-text h3 {
     font-size: 14px;
-    padding: 20px 15px;
+    padding: 20px 10%;
   }
   .hero .hero-text img {
     width: 400px;
